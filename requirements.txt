@@ -2,3 +2,4 @@ azure-cognitiveservices-vision-computervision==0.7.0
 msrest==0.7.1
 Pillow==9.4.0
 python-dotenv==1.0.0
+pip install pdfplumber==0.5.28

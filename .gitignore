@@ -1,13 +1,13 @@
-# Excluir el entorno virtual
+# Exclude the virtual environment
 venv/
 
-# Excluir archivos sensibles
+# Exclude sensitive files
 .env
 
-# Archivos y carpetas de Python
+# english
 __pycache__/
 *.pyc
 *.pyo
 
-# Excluir el archivo .env
+# Exclude the .env file
 .env
