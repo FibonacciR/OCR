@@ -1,33 +1,44 @@
+
+''' This script reads images from a directory and extracts text from them using pytesseract.
+
+The extracted text is saved to a text file with the same name as the image in the output directory.
+
+The script uses the pytesseract library, which is a Python wrapper for the Google Tesseract OCR engine.
+'''
+
+
+
+# Import the required libraries
 import os
 from PIL import Image
 import pytesseract
 
-# Configurar la ruta de Tesseract
+# Configure pytesseract to use the Tesseract executable
 pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
-# Directorios
+#Directories
 input_dir = "../data/images/"
 output_dir = "../outputs/"
 
-# Asegurarse de que el directorio de salida exista
+# Asure That the output directory exists
 os.makedirs(output_dir, exist_ok=True)
 
 def extract_text_from_image(image_path):
     """Extrae texto de una imagen usando pytesseract."""
     try:
-        # Cargar la imagen
+        # Load Image
         print(f"Cargando imagen: {image_path}")
         image = Image.open(image_path)
         
-        # Guardar la imagen cargada temporalmente para verificarla
+        # Save a temporary copy of the loaded image
         temp_image_path = os.path.join(output_dir, "temp_image.png")
         image.save(temp_image_path)
         print(f"Imagen cargada guardada temporalmente en: {temp_image_path}")
         
-        # Extraer texto
+        # Extract text from the image
         print("Extrayendo texto...")
         text = pytesseract.image_to_string(image)
-        print(f"Texto extraído: {text[:100]}")  # Mostrar los primeros 100 caracteres del texto extraído
+        print(f"Texto extraído: {text[:100]}")  # Show the first 100 characters
         return text
     except Exception as e:
         print(f"Error procesando {image_path}: {e}")

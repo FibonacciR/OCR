@@ -1,3 +1,12 @@
+
+
+'''This script reads images from a directory and extracts text from them using the Azure Computer Vision service.
+
+The extracted text is displayed and the image is annotated with bounding boxes around the detected text.
+
+The script uses the Azure Cognitive Services Computer Vision SDK for Python, which provides a client library for interacting with the Computer Vision service.'''
+
+# Import required libraries
 from dotenv import load_dotenv
 import os
 import time
