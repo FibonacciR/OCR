@@ -1,9 +1,3 @@
-¡Excelente! El archivo `README.md` es una herramienta clave para explicar tu proyecto y hacerlo atractivo. Aquí te dejo una estructura típica y profesional que puedes seguir para mejorar tu `README.md`.
-
----
-
-### **1. Estructura Mejorada para tu `README.md`**
-Abre tu archivo `README.md` en VS Code y edítalo con el siguiente contenido:
 
 ```markdown
 # OCR - Optical Character Recognition
@@ -14,7 +8,7 @@ This project implements an Optical Character Recognition (OCR) system using Azur
 
 ## Features
 
-- Extract text from images with high accuracy.
+- Extract text from images with high accuracy. status
 - Multi-language support for global adaptability.
 - Easy integration with other applications.
 - Uses Azure Cognitive Services for enhanced performance.
